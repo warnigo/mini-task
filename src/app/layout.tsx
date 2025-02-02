@@ -1,9 +1,9 @@
 import { type FC, type PropsWithChildren } from "react"
 
-import { Layout } from "@/app/layouts"
+import { cn } from "@shared/lib"
 
-import { GeistMono } from "geist/font/mono"
-import { GeistSans } from "geist/font/sans"
+import { nunito } from "./config"
+import { Layout } from "./layouts"
 
 import "@shared/assets/css/tailwind.css"
 import "./styles/globals.css"
@@ -11,11 +11,7 @@ import "./styles/globals.css"
 export { metadata, viewport } from "./config"
 
 const RootLayout: FC<PropsWithChildren> = async ({ children }) => (
-  <html
-    suppressHydrationWarning
-    className={`${GeistSans.variable} ${GeistMono.variable}`}
-    lang="en"
-  >
+  <html suppressHydrationWarning className={cn(nunito.className)} lang="en">
     <body className="antialiased">
       <Layout>{children}</Layout>
     </body>

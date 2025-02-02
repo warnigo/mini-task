@@ -1,22 +1,24 @@
+import { Categories } from "./types"
+
 export const sidebarMenu = [
   {
     title: "Все темы",
-    href: "all",
+    href: Categories.ALL,
   },
   {
     title: "Логика и мышление",
-    href: "thinking",
+    href: Categories.THINKING,
   },
   {
     title: "Загадки",
-    href: "riddles",
+    href: Categories.RIDDLES,
   },
   {
     title: "Головоломки",
-    href: "puzzles",
+    href: Categories.PUZZLES,
   },
   {
     title: "Путешествия",
-    href: "travel",
+    href: Categories.TRAVEL,
   },
 ]
